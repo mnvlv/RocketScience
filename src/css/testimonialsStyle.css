@@ -3,10 +3,10 @@
   max-width: 880px;
   background: #fff;
   padding-left: 31px;
+  padding-top: 35px;
 }
 
 .reviews-section h2 {
-  padding-top: 35px;
   margin: 0 0 21px 0;
   font-family: var(--font-family);
   font-weight: 700;
@@ -19,29 +19,34 @@
 .reviews-slider {
   display: flex;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .slide {
-  max-width: 300px;
-  border: 1px solid #ddd;
+  transition: transform .3s ease;
+  padding: 26px 40px 23px 19px;
+  min-width: 300px;
+  height: 410px;
   margin-right: 20px;
-  padding: 10px;
   scroll-snap-align: start;
   background: #f9f7f2;
 }
 
-.review-card {}
-
-.review-card p {
-  text-align: left;
+.slide p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 167%;
+  color: #000;
+  margin-bottom: 8px;
 }
 
 .review-header {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.review-header img {
+.review-header svg {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -53,7 +58,6 @@
   font-size: 15px;
   line-height: 113%;
   color: #000;
-
 }
 
 .colorText {
@@ -65,34 +69,24 @@
   color: #fc4f1e;
 }
 
-.review-header p {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 131%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #212121;
-}
-
 .review-header-title {
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 13px;
   line-height: 131%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #212121;
-  margin-top: 30px;
 }
 
 .review-images {
   display: flex;
-  margin: 10px 0;
+  gap: 5px;
 }
 
 .review-images img {
   width: 50px;
   height: 50px;
-  margin-right: 5px;
 }
 
 .more-images {
@@ -106,20 +100,27 @@
 }
 
 .review-footer {
+  gap: 3px;
   font-weight: 400;
   font-size: 11px;
-  line-height: 227%;
   color: #9d9d9d;
-  margin-right: 50px;
   align-items: center;
-  padding: 5px;
+  text-align: center;
+  margin-top: 21px;
   display: flex;
   justify-content: space-between;
 }
 
+.dots-between {
+  color: #8f8f8e;
+}
 
 .likeBlock svg {
   margin: 0 2px -2px 0;
+}
+
+.likeBlock {
+  margin-left: 20px;
 }
 
 .testimonials-btn {
@@ -138,7 +139,6 @@
   margin-bottom: 30px;
   border: 2px solid #ff4641;
   border-radius: 2px;
-  width: 124px;
   height: 40px;
   align-items: center;
   text-align: center;
@@ -148,7 +148,7 @@
 .dots {
   display: flex;
   align-items: center;
-  margin: 35px 0 0 0;
+  margin: 0 29px 0 0;
 }
 
 .dot {
@@ -159,6 +159,7 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+  transition: all .3s;
 }
 
 .dot.active {
@@ -167,6 +168,6 @@
   background-color: #FF4641;
 }
 
-.dot:hover {}
-
-.testimonials-btn {}
+.dot:hover {
+  background-color: #FF4641;
+}

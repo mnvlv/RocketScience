@@ -19,7 +19,6 @@ const dots = document.querySelectorAll(".dot");
 let currentIndex = 0;
 
 function updateSlider(index) {
-  // slide.style.transform = `translateX(-${index * 100}%)`;
   slide.forEach(
     (slide) => (slide.style.transform = `translateX(-${index * 100}%)`)
   );
