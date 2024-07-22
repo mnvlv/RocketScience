@@ -3,12 +3,11 @@
 //   wrapAround: true,
 // });
 
-document.querySelectorAll(".more-images").forEach((item) => {
-  item.addEventListener("click", (event) => {
-    alert("Открыть галерею");
-  });
-});
-
+// document.querySelectorAll(".more-images").forEach((item) => {
+//   item.addEventListener("click", (event) => {
+//     alert("Открыть галерею");
+//   });
+// });
 
 // Слайдер
 const slider = document.querySelector(".reviews-slider");
@@ -29,9 +28,7 @@ dots.forEach((dot, index) => {
   });
 });
 
-let startX,
-  scrollLeft,
-  isDown = false;
+let startX, scrollLeft, isDown = false;
 
 slider.addEventListener("mousedown", (e) => {
   isDown = true;
@@ -61,12 +58,33 @@ slider.addEventListener("mousemove", (e) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////////////
-
-
 const userChat = document.getElementById("chat-user");
-    const adminChat = document.getElementById("chat-admin");
-    const userMessageInput = document.getElementById("user-message");
+const adminChat = document.getElementById("chat-admin");
+const userMessageInput = document.getElementById("user-message");
     const adminMessageInput = document.getElementById("admin-message");
     const sendUserButton = document.getElementById("send-user");
     const sendAdminButton = document.getElementById("send-admin");

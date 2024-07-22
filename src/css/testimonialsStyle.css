@@ -16,13 +16,17 @@
   scroll-snap-type: x mandatory;
 }
 
-.review-card {
+.slide {
   min-width: 300px;
   border: 1px solid #ddd;
   margin-right: 20px;
   padding: 10px;
   scroll-snap-align: start;
   background: #f9f7f2;
+}
+
+.review-card {
+
 }
 
 .review-card p {
@@ -138,14 +142,13 @@
   justify-content: center;
 }
 
-.pagination {
+.dots {
   display: flex;
   align-items: center;
   margin: 35px 0 0 0;
 }
 
 .dot {
-  /* padding: 3px; */
   height: 4px;
   width: 4px;
   margin: 0 8px;
@@ -153,7 +156,6 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
-  /* transition: .5s; */
 }
 
 .dot.active {
@@ -162,9 +164,12 @@
   background-color: #FF4641;
 }
 .dot:hover {
-  /* height: 8px; */
-  /* width: 8px; */
-  /* background-color: #FF4641; */
+
 }
 
 .testimonials-btn {}
+
+
+
+
+
