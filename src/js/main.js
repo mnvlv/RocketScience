@@ -1,15 +1,57 @@
-// import lightbox from "lightbox2";
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+const prevBtn = document.getElementsByClassName("prev")[0];
+const nextBtn = document.getElementsByClassName("next")[0];
 
-// lightbox.option({
-//   resizeDuration: 200,
-//   wrapAround: true,
-// });
+const images = Array.from(document.querySelectorAll(".review-card img"));
+let currIndex = 0;
 
-// document.querySelectorAll(".more-images").forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     alert("Открыть галерею");
-//   });
-// });
+function openModal(index) {
+  modal.style.display = "flex";
+  modalImg.src = images[index].src;
+  currIndex = index;
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+function showNextImage() {
+  currIndex = (currIndex + 1) % images.length;
+  modalImg.src = images[currIndex].src;
+}
+
+function showPrevImage() {
+  currIndex = (currIndex - 1 + images.length) % images.length;
+  modalImg.src = images[currIndex].src;
+}
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    openModal(index);
+  });
+});
+
+closeBtn.addEventListener("click", closeModal);
+prevBtn.addEventListener("click", showPrevImage);
+nextBtn.addEventListener("click", showNextImage);
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    showPrevImage();
+  } else if (event.key === "ArrowRight") {
+    showNextImage();
+  } else if (event.key === "Escape") {
+    closeModal();
+  }
+});
 
 // Слайдер
 const slider = document.querySelector(".reviews-slider");
@@ -37,7 +79,6 @@ let startX,
   scrollLeft,
   isDown = false;
 
-///////////////////////////////////////////////
 const userChat = document.getElementById("chat-user");
 const adminChat = document.getElementById("chat-admin");
 const userMessageInput = document.getElementById("user-message");
@@ -105,7 +146,6 @@ function renderMessages(messages) {
       srcImage = "./image/iconChat/admin-img.svg";
     }
 
-   
     const formattedDate = formatDate(msg.timestamp);
     messageElement.innerHTML = `
         <img src= ${srcImage} alt="" />
@@ -117,13 +157,12 @@ function renderMessages(messages) {
 
     userMessagesContainer.appendChild(messageElement.cloneNode(true));
     adminMessagesContainer.appendChild(messageElement);
-    
-    
+
     chatWindowScroll.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "end",
-      });
+      behavior: "smooth",
+      block: "start",
+      inline: "end",
+    });
   });
 
   // Автоматическая прокрутка к последнему сообщению
