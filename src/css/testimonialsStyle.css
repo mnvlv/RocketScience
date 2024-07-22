@@ -1,23 +1,28 @@
 .reviews-section {
   margin: auto;
-  max-width: 842px;
+  max-width: 880px;
   background: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-left: 31px;
 }
 
 .reviews-section h2 {
-  margin: 0 0 20px 0;
+  padding-top: 35px;
+  margin: 0 0 21px 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 29px;
+  letter-spacing: 0.03em;
+  color: #000;
+
 }
 
 .reviews-slider {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
 }
 
 .slide {
-  min-width: 300px;
+  max-width: 300px;
   border: 1px solid #ddd;
   margin-right: 20px;
   padding: 10px;
@@ -25,9 +30,7 @@
   background: #f9f7f2;
 }
 
-.review-card {
-
-}
+.review-card {}
 
 .review-card p {
   text-align: left;
@@ -163,13 +166,7 @@
   width: 8px;
   background-color: #FF4641;
 }
-.dot:hover {
 
-}
+.dot:hover {}
 
 .testimonials-btn {}
-
-
-
-
-

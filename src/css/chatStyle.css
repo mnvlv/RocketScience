@@ -77,15 +77,7 @@
 .chat-messages {
   overflow-y: auto;
   scroll-behavior: smooth;
-
 }
-
-/* .chat-messages scroll {
-  border-radius: 4px;
-  width: 3px;
-  height: 11px;
-  
-} */
 
 .chat-messages::-webkit-scrollbar {
   width: 3px;
