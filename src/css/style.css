@@ -1,80 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import "chatStyle.css";
-@import "testimonialsStyle.css";
-@import "swiper-bundle.min.css";
-
+@import 'chatStyle.css';
+@import 'testimonialsStyle.css';
+@import 'swiper-bundle.min.css';
 
 :root {
-  --font-family: "Roboto", sans-serif;
+    --font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #F9F7F2;
-  justify-content: center;
-  align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f7f2;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper {
-  margin-top: 5.5%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+    margin-top: 5.5%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .barcelona-section {
-  margin: 110px auto 20px;
-  background-color: #fff;
-  max-width: 880px;
+    margin: 110px auto 20px;
+    background-color: #fff;
+    max-width: 880px;
 }
 
 .barcelona-overview {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .barcelona-overview img {
-  width: 50%;
-  margin-right: 2px;
+    width: 50%;
+    margin-right: 2px;
 }
 
 .overview-content {
-  margin-left: 29px;
-  flex: 1;
+    margin-left: 29px;
+    flex: 1;
 }
 
 .overview-content h1 {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 29px;
-  letter-spacing: 0.03em;
-  color: #000;
-  margin-bottom: 19px;
-
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 29px;
+    letter-spacing: 0.03em;
+    color: #000;
+    margin-bottom: 19px;
 }
 
 .overview-content p {
-  font-family: var(--font-family);
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 167%;
-  color: #000;
-  max-width: 380px;
-  margin-bottom: 6px;
-
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 167%;
+    color: #000;
+    max-width: 380px;
+    margin-bottom: 6px;
 }
 
 .learnMore {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .learnMore p {
-  margin-bottom: 3px;
+    margin-bottom: 3px;
 }
 
 .rectangle {
-  width: 120px;
-  height: 3px;
-  background: #ff4641;
+    width: 120px;
+    height: 3px;
+    background: #ff4641;
 }
